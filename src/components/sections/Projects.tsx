@@ -4,7 +4,7 @@ import { ProjectCard } from "../ui/ProjectCard";
 
 export function Projects() {
   return (
-    <Section id="projects" className="bg-slate-900/30">
+    <Section id="projects" className="bg-slate-100/80 dark:bg-slate-900/30">
       <SectionHeading
         title="Projects"
         subtitle="Selected work from university and personal GitHub repositories."

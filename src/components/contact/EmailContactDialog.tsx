@@ -143,7 +143,7 @@ export function EmailContactDialog() {
     <dialog
       ref={dialogRef}
       aria-labelledby={titleId}
-      className="w-[calc(100%-2rem)] max-w-lg rounded-xl border border-slate-700 bg-slate-900 p-0 text-slate-100 shadow-xl backdrop:bg-slate-950/80"
+      className="w-[calc(100%-2rem)] max-w-lg rounded-xl border border-slate-300 bg-white p-0 text-slate-900 shadow-xl backdrop:bg-slate-900/40 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-100 dark:backdrop:bg-slate-950/80"
       onClose={closeEmailDialog}
       onCancel={(e) => {
         e.preventDefault();
@@ -156,17 +156,17 @@ export function EmailContactDialog() {
       <form onSubmit={handleSubmit} className="p-6">
         <div className="mb-6 flex items-start justify-between gap-4">
           <div>
-            <h2 id={titleId} className="text-xl font-semibold text-white">
+            <h2 id={titleId} className="text-xl font-semibold text-slate-900 dark:text-white">
               Contact me via email
             </h2>
-            <p className="mt-1 text-sm text-slate-400">
+            <p className="mt-1 text-sm text-slate-500 dark:text-slate-400">
               Send a message to {profile.contact.email}
             </p>
           </div>
           <button
             type="button"
             onClick={closeEmailDialog}
-            className="rounded-lg p-1 text-slate-400 transition hover:bg-slate-800 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-400"
+            className="rounded-lg p-1 text-slate-500 transition hover:bg-slate-100 hover:text-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-400 dark:text-slate-400 dark:hover:bg-slate-800 dark:hover:text-white"
             aria-label="Close dialog"
           >
             <X className="h-5 w-5" />
@@ -202,7 +202,7 @@ export function EmailContactDialog() {
           <div>
             <label
               htmlFor="contact-message"
-              className="mb-1 block text-sm font-medium text-slate-300"
+              className="mb-1 block text-sm font-medium text-slate-700 dark:text-slate-300"
             >
               Message
             </label>
@@ -211,8 +211,8 @@ export function EmailContactDialog() {
               rows={5}
               value={form.message}
               onChange={(e) => updateField("message", e.target.value)}
-              className={`w-full rounded-lg border bg-slate-800 px-3 py-2 text-white placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-teal-400 ${
-                errors.message ? "border-red-500" : "border-slate-700"
+              className={`w-full rounded-lg border bg-slate-100 px-3 py-2 text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-teal-400 dark:bg-slate-800 dark:text-white dark:placeholder:text-slate-500 ${
+                errors.message ? "border-red-500" : "border-slate-300 dark:border-slate-700"
               }`}
               required
             />
@@ -226,7 +226,7 @@ export function EmailContactDialog() {
           <p
             role="status"
             className={`mt-4 text-sm ${
-              status === "error" ? "text-red-400" : "text-teal-300"
+              status === "error" ? "text-red-500 dark:text-red-400" : "text-teal-600 dark:text-teal-300"
             }`}
           >
             {statusMessage}
@@ -268,7 +268,7 @@ function Field({
 }) {
   return (
     <div>
-      <label htmlFor={id} className="mb-1 block text-sm font-medium text-slate-300">
+      <label htmlFor={id} className="mb-1 block text-sm font-medium text-slate-700 dark:text-slate-300">
         {label}
       </label>
       <input
@@ -276,8 +276,8 @@ function Field({
         type={type}
         value={value}
         onChange={(e) => onChange(e.target.value)}
-        className={`w-full rounded-lg border bg-slate-800 px-3 py-2 text-white placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-teal-400 ${
-          error ? "border-red-500" : "border-slate-700"
+        className={`w-full rounded-lg border bg-slate-100 px-3 py-2 text-slate-900 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-teal-400 dark:bg-slate-800 dark:text-white dark:placeholder:text-slate-500 ${
+          error ? "border-red-500" : "border-slate-300 dark:border-slate-700"
         }`}
         required={required}
       />

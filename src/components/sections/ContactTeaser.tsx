@@ -7,7 +7,7 @@ export function ContactTeaser() {
   const { openEmailDialog } = useEmailDialog();
 
   return (
-    <Section id="get-in-touch" className="bg-slate-900/30">
+    <Section id="get-in-touch" className="bg-slate-100/80 dark:bg-slate-900/30">
       <SectionHeading
         title="Get in touch"
         subtitle="Interested in working together? Reach out via the contact page or send an email."
