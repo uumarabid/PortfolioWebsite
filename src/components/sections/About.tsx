@@ -8,7 +8,7 @@ export function About() {
         title="About"
         subtitle="Software engineer focused on practical delivery and quality."
       />
-      <p className="max-w-3xl text-lg leading-relaxed text-slate-300">
+      <p className="max-w-3xl text-lg leading-relaxed text-slate-600 dark:text-slate-300">
         {profile.summary}
       </p>
     </Section>

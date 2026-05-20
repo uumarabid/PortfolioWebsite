@@ -26,11 +26,11 @@ export function SectionHeading({
 }) {
   return (
     <div className="mb-10 md:mb-12">
-      <h2 className="text-2xl font-bold tracking-tight text-white md:text-3xl">
+      <h2 className="text-2xl font-bold tracking-tight text-slate-900 md:text-3xl dark:text-white">
         {title}
       </h2>
       {subtitle && (
-        <p className="mt-3 max-w-2xl text-slate-400">{subtitle}</p>
+        <p className="mt-3 max-w-2xl text-slate-500 dark:text-slate-400">{subtitle}</p>
       )}
       <div className="mt-4 h-1 w-16 rounded-full bg-teal-500" />
     </div>

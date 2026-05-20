@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
 import { ContactInfoCard } from "../components/contact/ContactInfoCard";
 import { Button } from "../components/ui/Button";
+import { ThemeToggle } from "../components/ui/ThemeToggle";
 import { useEmailDialog } from "../context/EmailDialogContext";
 import { profile } from "../data/profile";
 
@@ -23,10 +24,13 @@ export function ContactPage() {
     <div className="py-16 md:py-20">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="mb-12 max-w-2xl">
-          <h1 className="text-3xl font-bold tracking-tight text-white md:text-4xl">
-            Contact me
-          </h1>
-          <p className="mt-4 text-lg text-slate-400">
+          <div className="flex flex-wrap items-center gap-8 md:gap-12">
+            <h1 className="text-3xl font-bold tracking-tight text-slate-900 md:text-4xl dark:text-white">
+              Contact me
+            </h1>
+            <ThemeToggle className="shrink-0" />
+          </div>
+          <p className="mt-4 text-lg text-slate-500 dark:text-slate-400">
             I am open to software development opportunities, collaborations, and
             general enquiries. Use the details below or send a message through the
             email form.
@@ -79,8 +83,8 @@ export function ContactPage() {
           />
         </div>
 
-        <div className="mt-12 rounded-xl border border-slate-800 bg-slate-900/50 p-6">
-          <h2 className="text-lg font-semibold text-white">Quick actions</h2>
+        <div className="mt-12 rounded-xl border border-slate-200 bg-white p-6 dark:border-slate-800 dark:bg-slate-900/50">
+          <h2 className="text-lg font-semibold text-slate-900 dark:text-white">Quick actions</h2>
           <div className="mt-4 flex flex-wrap gap-3">
             <Button
               href={`mailto:${contact.email}`}
