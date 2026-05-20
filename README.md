@@ -46,10 +46,26 @@ To send messages in the browser without opening an email client:
 
 4. Restart `npm run dev`.
 
-## Deploy later
+## Deploy
 
-- **Vercel / Netlify:** connect the repo; build command `npm run build`, output `dist`.
-- **GitHub Pages:** set `base: '/PortfolioWebsite/'` in `vite.config.ts` if using a project URL, then deploy `dist`.
+### Option A — GitHub Pages (free, repo already on GitHub)
+
+1. Merge your branch into `main` and push.
+2. On GitHub: **Settings → Pages → Build and deployment → Source:** **GitHub Actions**.
+3. After the workflow runs, the site is at [https://uumarabid.github.io/PortfolioWebsite/](https://uumarabid.github.io/PortfolioWebsite/).
+
+The workflow in `.github/workflows/deploy.yml` builds with `VITE_BASE_PATH=/PortfolioWebsite/` and deploys `dist/`.
+
+### Option B — Vercel (simplest, custom domain friendly)
+
+1. Sign in at [vercel.com](https://vercel.com) with GitHub.
+2. **Import** `uumarabid/PortfolioWebsite`.
+3. Build: `npm run build`, output: `dist` (defaults are fine). `vercel.json` handles SPA routes.
+4. Deploy — no `base` path change needed.
+
+### Option C — Netlify
+
+Same as Vercel: connect repo, build `npm run build`, publish `dist`, add a redirect `/* /index.html 200` for client routes.
 
 ## Routes
 
