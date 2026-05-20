@@ -1,0 +1,90 @@
+export type Project = {
+  name: string;
+  description: string;
+  highlights: string[];
+  technologies: string[];
+  repoUrl: string;
+  featured?: boolean;
+};
+
+export const projects: Project[] = [
+  {
+    name: "Hotel Management System",
+    description:
+      "Full-stack web application for managing bookings, cancellations, and employee roles with an admin dashboard.",
+    highlights: [
+      "Role-based access control for operational efficiency.",
+      "MySQL database for dynamic data handling and automated booking processes.",
+      "Admin dashboard for bookings and staff management.",
+    ],
+    technologies: ["React.js", "Node.js", "Express.js", "MySQL", "Material UI"],
+    repoUrl: "https://github.com/uumarabid/UmarAbidHotelManagement",
+    featured: true,
+  },
+  {
+    name: "Blogging Web Application",
+    description:
+      "Web application for creating and managing blog content with a modern JavaScript stack.",
+    highlights: [
+      "Client-side interactivity and content management patterns.",
+      "Structured project layout for maintainable front-end code.",
+    ],
+    technologies: ["JavaScript", "HTML", "CSS"],
+    repoUrl: "https://github.com/uumarabid/BloggingApplicationUmar",
+  },
+  {
+    name: "API Web Application",
+    description:
+      "Client web application consuming RESTful APIs with separation between front-end and data layer.",
+    highlights: [
+      "API-linked client architecture.",
+      "Demonstrates integration between UI and external data sources.",
+    ],
+    technologies: ["HTML", "JavaScript", "REST APIs"],
+    repoUrl: "https://github.com/uumarabid/UmarAbidAPILinkedClientWebApplication",
+  },
+  {
+    name: "Coding with Design Patterns",
+    description:
+      "Java project exploring common design patterns and object-oriented structure.",
+    highlights: [
+      "Practical implementations of software design patterns.",
+      "Emphasis on maintainable, extensible code structure.",
+    ],
+    technologies: ["Java", "OOP", "Design Patterns"],
+    repoUrl: "https://github.com/uumarabid/CodingWithDesignPatternsUmar",
+  },
+  {
+    name: "Database Driven Website",
+    description:
+      "PHP-based website with persistent data storage and dynamic page generation.",
+    highlights: [
+      "Database-backed content and user interactions.",
+      "Server-side logic connected to a relational database.",
+    ],
+    technologies: ["PHP", "MySQL", "HTML"],
+    repoUrl: "https://github.com/uumarabid/UmarDatabaseDrivenWebsite",
+  },
+  {
+    name: "Object Oriented Programming",
+    description:
+      "Collection of Java exercises and applications demonstrating OOP principles.",
+    highlights: [
+      "Classes, inheritance, and encapsulation in practice.",
+      "Foundation for larger application design.",
+    ],
+    technologies: ["Java", "OOP"],
+    repoUrl: "https://github.com/uumarabid/ObjectOrientedProgramming",
+  },
+  {
+    name: "User Interface Design",
+    description:
+      "UI design coursework focusing on layout, usability, and visual hierarchy.",
+    highlights: [
+      "Responsive layout and component-based structure.",
+      "Attention to accessibility and user experience.",
+    ],
+    technologies: ["HTML", "CSS", "UI Design"],
+    repoUrl: "https://github.com/uumarabid/UserInterfaceDesign",
+  },
+];
