@@ -1,5 +1,6 @@
 import { Outlet } from "react-router-dom";
 import { EmailContactDialog } from "../contact/EmailContactDialog";
+import { ScrollToTop } from "../ui/ScrollToTop";
 import { Footer } from "./Footer";
 import { Header } from "./Header";
 
@@ -18,6 +19,7 @@ export function Layout() {
       </main>
       <Footer />
       <EmailContactDialog />
+      <ScrollToTop />
     </div>
   );
 }
