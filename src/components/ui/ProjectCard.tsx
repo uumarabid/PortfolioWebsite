@@ -1,5 +1,5 @@
-import { ExternalLink } from "lucide-react";
 import type { Project } from "../../data/projects";
+import { GitHubIcon } from "./GitHubIcon";
 import { TagList } from "./TagList";
 
 type ProjectCardProps = {
@@ -41,8 +41,8 @@ export function ProjectCard({ project }: ProjectCardProps) {
         rel="noopener noreferrer"
         className="inline-flex items-center gap-2 text-sm font-medium text-teal-600 transition hover:text-teal-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-400 focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:text-teal-400 dark:hover:text-teal-300 dark:focus-visible:ring-offset-slate-900"
       >
+        <GitHubIcon className="h-4 w-4" aria-hidden />
         View on GitHub
-        <ExternalLink className="h-4 w-4" aria-hidden />
       </a>
     </article>
   );

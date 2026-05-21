@@ -1,4 +1,5 @@
-import { ArrowDown, Code2, Download } from "lucide-react";
+import { ArrowDown, Download } from "lucide-react";
+import { GitHubIcon } from "../ui/GitHubIcon";
 import { profile } from "../../data/profile";
 import { Button } from "../ui/Button";
 import { ThemeToggle } from "../ui/ThemeToggle";
@@ -36,7 +37,7 @@ export function Hero() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Code2 className="h-4 w-4" aria-hidden />
+            <GitHubIcon className="h-4 w-4" aria-hidden />
             GitHub
           </Button>
         </div>

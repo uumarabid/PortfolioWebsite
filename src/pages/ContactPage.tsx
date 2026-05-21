@@ -1,4 +1,5 @@
-import { Code2, Mail, MapPin, Phone } from "lucide-react";
+import { Mail, MapPin, Phone } from "lucide-react";
+import { GitHubIcon } from "../components/ui/GitHubIcon";
 import { LinkedInIcon } from "../components/ui/LinkedInIcon";
 import { useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
@@ -65,7 +66,7 @@ export function ContactPage() {
             value={contact.location}
           />
           <ContactInfoCard
-            icon={Code2}
+            icon={GitHubIcon}
             label="GitHub"
             value={contact.githubUsername}
             href={contact.github}
