@@ -17,6 +17,6 @@ export const profile = {
     github: "https://github.com/uumarabid",
     githubUsername: "uumarabid",
     linkedin: "",
-    linkedinLabel: "LinkedIn (add your profile URL in src/data/profile.ts)",
+    linkedinLabel: "https://www.linkedin.com/in/muhammad-umar-abid-93457b22b/",
   },
 } as const;
