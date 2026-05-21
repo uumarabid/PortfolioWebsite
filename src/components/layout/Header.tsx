@@ -1,15 +1,17 @@
 import { Code2, Mail, Menu, X } from "lucide-react";
 import { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useMatch } from "react-router-dom";
 import { useEmailDialog } from "../../context/EmailDialogContext";
 import { profile } from "../../data/profile";
+import { sectionHash } from "../../lib/paths";
 import { Button } from "../ui/Button";
+
 const homeNavItems = [
-  { label: "About", href: "/#about" },
-  { label: "Skills", href: "/#skills" },
-  { label: "Experience", href: "/#experience" },
-  { label: "Projects", href: "/#projects" },
-  { label: "Education", href: "/#education" },
+  { label: "About", sectionId: "about" },
+  { label: "Skills", sectionId: "skills" },
+  { label: "Experience", sectionId: "experience" },
+  { label: "Projects", sectionId: "projects" },
+  { label: "Education", sectionId: "education" },
 ];
 
 export function Header() {
@@ -17,7 +19,7 @@ export function Header() {
   const [menuOpenedOnPath, setMenuOpenedOnPath] = useState("");
   const location = useLocation();
   const { openEmailDialog } = useEmailDialog();
-  const isHome = location.pathname === "/";
+  const isHome = useMatch({ path: "/", end: true }) != null;
   const isMenuOpen = menuOpen && menuOpenedOnPath === location.pathname;
 
   const handleToggleMenu = () => {
@@ -48,8 +50,8 @@ export function Header() {
           {isHome &&
             homeNavItems.map((item) => (
               <a
-                key={item.href}
-                href={item.href}
+                key={item.sectionId}
+                href={sectionHash(item.sectionId)}
                 className="text-sm text-slate-600 transition hover:text-teal-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-400 dark:text-slate-300 dark:hover:text-teal-400"
               >
                 {item.label}
@@ -116,9 +118,9 @@ export function Header() {
           <ul className="space-y-3">
             {isHome &&
               homeNavItems.map((item) => (
-                <li key={item.href}>
+                <li key={item.sectionId}>
                   <a
-                    href={item.href}
+                    href={sectionHash(item.sectionId)}
                     className="block text-slate-600 hover:text-teal-500 dark:text-slate-300 dark:hover:text-teal-400"
                     onClick={handleCloseMenu}
                   >
