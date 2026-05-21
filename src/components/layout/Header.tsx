@@ -1,4 +1,5 @@
 import { Code2, Mail, Menu, X } from "lucide-react";
+import { LinkedInIcon } from "../ui/LinkedInIcon";
 import { useState } from "react";
 import { Link, useLocation, useMatch } from "react-router-dom";
 import { useEmailDialog } from "../../context/EmailDialogContext";
@@ -83,6 +84,17 @@ export function Header() {
           >
             <Code2 className="h-5 w-5" />
           </a>
+          {profile.contact.linkedin ? (
+            <a
+              href={profile.contact.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn profile"
+              className="text-slate-600 transition hover:text-teal-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-400 dark:text-slate-300 dark:hover:text-teal-400"
+            >
+              <LinkedInIcon className="h-5 w-5" />
+            </a>
+          ) : null}
           <Button
             variant="secondary"
             className="!py-2"

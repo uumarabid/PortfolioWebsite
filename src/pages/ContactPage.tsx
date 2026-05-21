@@ -1,4 +1,5 @@
-import { Code2, Mail, MapPin, Phone, Share2 } from "lucide-react";
+import { Code2, Mail, MapPin, Phone } from "lucide-react";
+import { LinkedInIcon } from "../components/ui/LinkedInIcon";
 import { useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
 import { ContactInfoCard } from "../components/contact/ContactInfoCard";
@@ -71,7 +72,7 @@ export function ContactPage() {
             external
           />
           <ContactInfoCard
-            icon={Share2}
+            icon={LinkedInIcon}
             label="LinkedIn"
             value={
               contact.linkedin

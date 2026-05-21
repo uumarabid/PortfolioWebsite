@@ -1,4 +1,5 @@
-import { Code2, Mail, Share2 } from "lucide-react";
+import { Code2, Mail } from "lucide-react";
+import { LinkedInIcon } from "../ui/LinkedInIcon";
 import { profile } from "../../data/profile";
 
 export function Footer() {
@@ -35,7 +36,7 @@ export function Footer() {
               aria-label="LinkedIn"
               className="text-slate-500 transition hover:text-teal-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-400 dark:text-slate-400 dark:hover:text-teal-400"
             >
-              <Share2 className="h-5 w-5" />
+              <LinkedInIcon className="h-5 w-5" />
             </a>
           ) : null}
         </div>

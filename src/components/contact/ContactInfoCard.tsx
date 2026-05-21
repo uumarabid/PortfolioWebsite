@@ -1,9 +1,11 @@
-import type { LucideIcon } from "lucide-react";
 import { Copy } from "lucide-react";
+import type { ComponentType, SVGProps } from "react";
 import { useState } from "react";
 
+type IconComponent = ComponentType<SVGProps<SVGSVGElement>>;
+
 type ContactInfoCardProps = {
-  icon: LucideIcon;
+  icon: IconComponent;
   label: string;
   value: string;
   href?: string;
