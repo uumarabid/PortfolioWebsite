@@ -16,7 +16,7 @@ export const profile = {
     location: "Manchester / London, UK",
     github: "https://github.com/uumarabid",
     githubUsername: "uumarabid",
-    linkedin: "",
-    linkedinLabel: "https://www.linkedin.com/in/muhammad-umar-abid-93457b22b/",
+    linkedin: "https://www.linkedin.com/in/muhammad-umar-abid-93457b22b/",
+    linkedinLabel: "LinkedIn",
   },
 } as const;
