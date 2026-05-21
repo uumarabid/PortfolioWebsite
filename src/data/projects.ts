@@ -9,6 +9,27 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    name: "MCP-AI — Cursor Todo MCP",
+    description:
+      ".NET Todo applications with Cursor MCP integration, exposing the same CRUD tools over stdio and HTTP streaming for hands-on AI tooling practice.",
+    highlights: [
+      "Parallel stdio and HTTP MCP servers (todo-mcp and todo-mcp-http) wired to a shared ASP.NET Core REST API.",
+      "MCP tools for full Todo lifecycle: list, get, create, update, complete, and delete.",
+      "EF Core + SQLite backend with MVC dashboard and documented Cursor setup.",
+    ],
+    technologies: [
+      "C#",
+      ".NET",
+      "ASP.NET Core",
+      "EF Core",
+      "SQLite",
+      "MCP",
+      "Cursor",
+    ],
+    repoUrl: "https://github.com/uumarabid/MCP-AI",
+    featured: true,
+  },
+  {
     name: "Hotel Management System",
     description:
       "Full-stack web application for managing bookings, cancellations, and employee roles with an admin dashboard.",
