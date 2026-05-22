@@ -1,4 +1,9 @@
 {
+  "files.exclude": {
+    "**/CvDialogContext.tsx": true,
+    "**/CvPreviewDialog.tsx": true,
+    "**/src/components/cv": true
+  },
   "css.lint.unknownAtRules": "ignore",
   "scss.lint.unknownAtRules": "ignore",
   "files.associations": {
