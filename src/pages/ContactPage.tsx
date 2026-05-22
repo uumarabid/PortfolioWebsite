@@ -5,7 +5,6 @@ import { useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
 import { ContactInfoCard } from "../components/contact/ContactInfoCard";
 import { Button } from "../components/ui/Button";
-import { ThemeToggle } from "../components/ui/ThemeToggle";
 import { useEmailDialog } from "../context/EmailDialogContext";
 import { profile } from "../data/profile";
 
@@ -26,12 +25,9 @@ export function ContactPage() {
     <div className="py-16 md:py-20">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div className="mb-12 max-w-2xl">
-          <div className="flex flex-wrap items-center gap-8 md:gap-12">
-            <h1 className="text-3xl font-bold tracking-tight text-slate-900 md:text-4xl dark:text-white">
-              Contact me
-            </h1>
-            <ThemeToggle className="shrink-0" />
-          </div>
+          <h1 className="text-3xl font-bold tracking-tight text-slate-900 md:text-4xl dark:text-white">
+            Contact me
+          </h1>
           <p className="mt-4 text-lg text-slate-500 dark:text-slate-400">
             I am open to software development opportunities, collaborations, and
             general enquiries. Use the details below or send a message through the
