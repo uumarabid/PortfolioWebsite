@@ -40,8 +40,16 @@ export function Header() {
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
         <Link
           to="/"
-          className="text-lg font-semibold text-slate-900 transition hover:text-teal-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-400 dark:text-white dark:hover:text-teal-400"
+          className="flex items-center gap-2.5 text-lg font-semibold text-slate-900 transition hover:text-teal-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-400 dark:text-white dark:hover:text-teal-400"
+          aria-label={`${profile.name} home`}
         >
+          <img
+            src={profile.avatarSrc}
+            alt=""
+            className="h-9 w-9 shrink-0 rounded-full object-cover ring-2 ring-slate-200 dark:ring-slate-700"
+            width={36}
+            height={36}
+          />
           {profile.name.split(" ").slice(-2).join(" ")}
         </Link>
 

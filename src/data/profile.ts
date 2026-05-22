@@ -1,6 +1,8 @@
+import avatarSrc from "../assets/avatar.png"
 import { withBase } from "../lib/paths"
 
 export const profile = {
+  avatarSrc,
   name: "Muhammad Umar Abid",
   title: "Software Developer",
   location: "Manchester / London, UK",
