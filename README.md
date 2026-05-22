@@ -28,8 +28,6 @@ All copy lives in `src/data/`:
 - `profile.ts` — name, summary, contact details, LinkedIn URL
 - `skills.ts`, `experience.ts`, `projects.ts`, `education.ts`, `certifications.ts`
 
-Replace `public/Muhammad-Umar-Abid-CV.pdf` when you update your CV.
-
 ## Email contact form (optional)
 
 By default, submitting the contact dialog opens the visitor’s email client with a pre-filled message (`mailto:`).

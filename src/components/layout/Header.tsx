@@ -46,6 +46,7 @@ export function Header() {
           <img
             src={profile.avatarSrc}
             alt=""
+            aria-hidden
             className="h-9 w-9 shrink-0 rounded-full object-cover ring-2 ring-slate-200 dark:ring-slate-700"
             width={36}
             height={36}
@@ -77,13 +78,6 @@ export function Header() {
           >
             Contact
           </Link>
-          <a
-            href={profile.cvPath}
-            download
-            className="text-sm text-slate-600 transition hover:text-teal-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-400 dark:text-slate-300 dark:hover:text-teal-400"
-          >
-            CV
-          </a>
           <a
             href={profile.contact.github}
             target="_blank"
@@ -157,15 +151,6 @@ export function Header() {
               >
                 Contact
               </Link>
-            </li>
-            <li>
-              <a
-                href={profile.cvPath}
-                download
-                className="block text-slate-600 hover:text-teal-500 dark:text-slate-300 dark:hover:text-teal-400"
-              >
-                Download CV
-              </a>
             </li>
             <li>
               <button

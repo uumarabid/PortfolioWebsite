@@ -58,6 +58,7 @@ export function ContactInfoCard({
         <button
           type="button"
           onClick={handleCopy}
+          aria-label={copied ? `${label} copied` : `Copy ${label}`}
           className="mt-3 inline-flex items-center gap-1.5 text-xs text-slate-500 transition hover:text-teal-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-400 dark:text-slate-400 dark:hover:text-teal-400"
         >
           <Copy className="h-3.5 w-3.5" aria-hidden />

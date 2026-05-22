@@ -1,4 +1,4 @@
-import { ArrowDown, Download } from "lucide-react";
+import { ArrowDown } from "lucide-react";
 import { GitHubIcon } from "../ui/GitHubIcon";
 import { profile } from "../../data/profile";
 import { Button } from "../ui/Button";
@@ -26,10 +26,6 @@ export function Hero() {
           <Button href="#projects">
             View projects
             <ArrowDown className="h-4 w-4" aria-hidden />
-          </Button>
-          <Button href={profile.cvPath} variant="secondary" download>
-            <Download className="h-4 w-4" aria-hidden />
-            Download CV
           </Button>
           <Button
             href={profile.contact.github}

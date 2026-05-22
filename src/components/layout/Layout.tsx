@@ -3,6 +3,7 @@ import { EmailContactDialog } from "../contact/EmailContactDialog";
 import { ScrollToTop } from "../ui/ScrollToTop";
 import { Footer } from "./Footer";
 import { Header } from "./Header";
+import { ScrollRestoration } from "./ScrollRestoration";
 
 export function Layout() {
   return (
@@ -13,6 +14,7 @@ export function Layout() {
       >
         Skip to main content
       </a>
+      <ScrollRestoration />
       <Header />
       <main id="main-content" className="flex-1">
         <Outlet />
