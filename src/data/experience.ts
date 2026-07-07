@@ -34,8 +34,8 @@ export const softwareExperience: ExperienceEntry[] = [
 ];
 
 export const otherExperience = {
-  role: "Professional Driving Roles (Bus & Taxi Driver)",
-  companies: "Stagecoach, Go NorthWest & Uber",
+  role: "Professional Driving Roles (Bus Driver)",
+  companies: "Stagecoach, Go NorthWest",
   location: "Manchester, UK",
   period: "Feb 2016 – Present",
   highlights: [
