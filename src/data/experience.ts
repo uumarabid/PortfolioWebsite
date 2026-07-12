@@ -9,6 +9,24 @@ export type ExperienceEntry = {
 
 export const softwareExperience: ExperienceEntry[] = [
   {
+    role: "Accenture Discover & Experience Day",
+    company: "Accenture",
+    location: "London, UK",
+    period: "July 2026",
+    highlights: [
+      "Participated in a hands-on agentic AI hackathon with Accenture's Google Business Group and UKI Data & AI Solution Architecture community.",
+      "Designed and presented Resolve — an AI returns agent combining policy decision trees, Gemini LLM conversation layer, and structured human escalation.",
+      "Collaborated with Accenture technical teams on agentic AI architecture, prompt guardrails, and responsible AI design.",
+    ],
+    technologies: [
+      "Gemini",
+      "Agentic AI",
+      "LLM",
+      "Prompt Engineering",
+      "Responsible AI",
+    ],
+  },
+  {
     role: "Junior Software Developer",
     company: "Aero Parker",
     location: "Manchester, UK",
