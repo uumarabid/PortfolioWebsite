@@ -12,7 +12,7 @@ export const softwareExperience: ExperienceEntry[] = [
     role: "Junior Software Developer",
     company: "Aero Parker",
     location: "Manchester, UK",
-    period: "Jan 2025 – May 2025",
+    period: "Jan 2026 – May 2025",
     highlights: [
       "Developed and optimised front-end and back-end features for airport parking and lounge booking systems.",
       "Automated permission-based access controls, improving scalability and security.",
