@@ -7,19 +7,22 @@ type ProjectCardProps = {
 };
 
 export function ProjectCard({ project }: ProjectCardProps) {
+  const isHighlighted = project.featured || project.aiAssisted
+  const badgeLabel = project.featured ? "Featured" : project.aiAssisted ? "AI Assisted" : null
+
   return (
     <article
       className={`flex h-full flex-col rounded-xl border bg-white p-6 transition hover:border-teal-500/40 hover:bg-slate-50 dark:bg-slate-900/50 dark:hover:bg-slate-900/80 ${
-        project.featured
+        isHighlighted
           ? "border-teal-500/30 ring-1 ring-teal-500/10"
           : "border-slate-200 dark:border-slate-800"
       }`}
     >
       <div className="mb-3 flex items-start justify-between gap-3">
         <h3 className="text-lg font-semibold text-slate-900 dark:text-white">{project.name}</h3>
-        {project.featured && (
+        {badgeLabel && (
           <span className="shrink-0 rounded-full bg-teal-500/15 px-2.5 py-0.5 text-xs font-medium text-teal-600 dark:text-teal-300">
-            Featured
+            {badgeLabel}
           </span>
         )}
       </div>

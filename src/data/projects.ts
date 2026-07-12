@@ -5,6 +5,7 @@ export type Project = {
   technologies: string[];
   repoUrl: string;
   featured?: boolean;
+  aiAssisted?: boolean;
 };
 
 export const projects: Project[] = [
@@ -41,6 +42,46 @@ export const projects: Project[] = [
     technologies: ["React.js", "Node.js", "Express.js", "MySQL", "Material UI"],
     repoUrl: "https://github.com/uumarabid/UmarAbidHotelManagement",
     featured: true,
+  },
+  {
+    name: "Shifting Solutions — TripEnRoute Removals",
+    description:
+      "Full-stack marketing website for a nationwide UK removals business, with multi-page services, coverage, and contact flows.",
+    highlights: [
+      "React + Vite client with Express API, TypeScript, Tailwind CSS, and Framer Motion.",
+      "WhatsApp-first contact CTAs plus SMTP-backed quote form with Zod validation and rate limiting.",
+      "Six service detail pages, regional coverage, FAQ, and blog — production-ready npm workspace layout.",
+    ],
+    technologies: [
+      "React",
+      "TypeScript",
+      "Vite",
+      "Express",
+      "Tailwind CSS",
+      "Framer Motion",
+    ],
+    repoUrl: "https://github.com/uumarabid/TripEnRouteRemovals",
+    aiAssisted: true,
+  },
+  {
+    name: "Portfolio Website",
+    description:
+      "Personal developer portfolio with data-driven sections, optional in-browser contact via Formspree, and deploy targets for GitHub Pages and Vercel.",
+    highlights: [
+      "Vite + React + TypeScript + Tailwind CSS v3 with content centralized in src/data/.",
+      "Sections for skills, experience, projects, education, and certifications.",
+      "Contact flow supports mailto fallback or Formspree; CI workflow deploys to GitHub Pages.",
+    ],
+    technologies: [
+      "React",
+      "TypeScript",
+      "Vite",
+      "Tailwind CSS",
+      "React Router",
+      "Formspree",
+    ],
+    repoUrl: "https://github.com/uumarabid/PortfolioWebsite",
+    aiAssisted: true,
   },
   {
     name: "Blogging Web Application",
